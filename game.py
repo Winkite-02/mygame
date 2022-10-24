@@ -24,21 +24,23 @@
 
 import gamemod
 print("당신은 길을 가다가 괴상한 몬스터와 마주쳤다.")
-print("어떻게 하면 좋을까?")
-print("1. 싸운다 / 2. 도망간다")
-number = input("숫자를 입력하세요: ")
-print(f"당신은 {number}을 선택했다.")
+#여기서부터 반복하면 될 것 같은데
+for i in range(3):
+    print("어떻게 하면 좋을까?")
+    print("1. 싸운다 / 2. 도망간다")
+    number = input("숫자를 입력하세요: ")
+    print(f"당신은 {number}을 선택했다.")
 
 # 만약에 1번이면 싸운다.
-if (number=="1"):
-    print("싸움이 시작됩니다.\n")
-    gamemod.step1()
-elif (number=="2"):
-    print("당신은 도망갑니다.")
-    gamemod.step2()
-else:
-    print("해당되는 숫자를 정확히 누르세요.\n")
-    
-    print("마지막 선택 기회입니다. 잘못 입력시 게임오버!")
-
-
+    if (number=="1"):
+        print("싸움이 시작됩니다.\n")
+        gamemod.step1()
+    elif (number=="2"):
+        print("당신은 도망갑니다.")
+        gamemod.step2()
+    else:
+        print("해당되는 숫자를 정확히 누르세요.\n")
+        if i == 1:
+            print("마지막 선택 기회입니다. 잘못 입력시 게임오버!")
+# 여기까지 반복
+print("게임오버")

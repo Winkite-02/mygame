@@ -10,14 +10,23 @@ print("hello world")
 print("hello world")
 print("hello world")
 '...10번 반복'
+for i in range(10):
+    print("hello world")
+
 # 헬로 월드를 앞에 숫자를 붙여서 카운팅
 '1. hello world'
 '2. hello world'
 '3. hello world'
 '...몇번'
+for i in range(10):
+    print(f"{i+1}. hello world")
 
 # 조건문까지 합쳐서
 # 10번 찍어서 안넘어가는 나무 없다
 # 1번 찍고 ~ 2번 찍고~ ...
 # 만약 10번을 찍었을 때
 # 나무가 넘어간다~ 출력
+for i in range(10):
+    print(f"{i+1}찍고~")
+    if i == 9:
+        print("나무가 넘어간다~')")
